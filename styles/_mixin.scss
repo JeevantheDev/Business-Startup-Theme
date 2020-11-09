@@ -1,0 +1,9 @@
+@mixin fontColorChange($color) {
+    @if (lightness($color) > 50) {
+        color: $secondary-color;
+    }
+
+    @else {
+        color: $special-color;
+    }
+}

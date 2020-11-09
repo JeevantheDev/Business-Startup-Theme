@@ -1,0 +1,25 @@
+@import "./mixin";
+
+.major {
+    background-color: $special-color;
+
+    .custom {
+        @include fontColorChange($special-color)
+    }
+
+    &-brands {
+        // display: flex;
+        margin: 1rem 0;
+        justify-content: space-evenly;
+
+    }
+}
+
+@media (max-width: 500px) {
+    .major {
+        &-brands {
+            flex-direction: column;
+            overflow-y: hidden;
+        }
+    }
+}

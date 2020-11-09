@@ -1,0 +1,98 @@
+#home {
+    background: $secondary-color;
+}
+
+.landing {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    height: 100vh;
+
+    &-heading {
+        // position: relative;
+        align-self: center;
+        text-align: center;
+        margin: 0rem 1.2rem;
+        width: 100%;
+
+        .main-heading {
+            font-size: 4rem;
+            color: $special-color;
+        }
+
+        .sub-heading {
+            font-size: 1.2rem;
+            color: $special-color;
+        }
+    }
+
+    &-card {
+        background-color: $secondary-color;
+    }
+
+    &-image {
+        margin: 1rem 0;
+        align-self: flex-start;
+
+        .animate {
+            -webkit-animation: glow 1s ease-in-out infinite alternate;
+            -moz-animation: glow 1s ease-in-out infinite alternate;
+            animation: glow 1s ease-in-out infinite alternate;
+        }
+
+        img {
+            width: 50vw;
+        }
+    }
+}
+
+@keyframes glow {
+    from {
+        fill: $primary-color;
+    }
+
+    to {
+        fill: white;
+    }
+}
+
+@media (max-width: 768px) {
+    .landing {
+        flex-direction: column;
+
+        &-heading {
+            flex: 1;
+
+        }
+
+        &-image {
+            flex: 1;
+        }
+    }
+}
+
+@media (max-width: 540px) {
+    .landing {
+        flex-direction: column;
+
+        &-heading {
+            flex: 1;
+
+            .landing-card {
+                margin: 1.5rem 0;
+
+                h1 {
+                    font-size: 2.5rem;
+                }
+            }
+        }
+
+        &-image {
+            flex: 1;
+
+            svg {
+                width: 100vw;
+            }
+        }
+    }
+}

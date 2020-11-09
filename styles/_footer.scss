@@ -1,0 +1,20 @@
+.main-footer {
+    background-color: $secondary-color;
+    padding: 0.5rem 0.5rem;
+
+    &-section {
+        display: flex;
+        flex-direction: column;
+
+        &-logo {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1rem;
+            font-size: 1.2rem;
+            color: $special-color;
+
+        }
+    }
+}

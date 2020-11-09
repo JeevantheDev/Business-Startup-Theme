@@ -1,0 +1,52 @@
+#small_setting {
+    animation: setting 5s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#light {
+    path {
+        animation: toggle 1s ease-in-out infinite alternate;
+        transform-origin: center;
+        transform-box: fill-box;
+    }
+}
+
+#light_rays {
+    path {
+        animation: raytoggle 1s ease-in-out infinite alternate;
+        transform-origin: center;
+        transform-box: fill-box;
+    }
+}
+
+@keyframes setting {
+    from {
+        transform: rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes toggle {
+    from {
+        fill: white;
+    }
+
+    to {
+        fill: yellow;
+    }
+}
+
+@keyframes raytoggle {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+        fill: yellow;
+    }
+}

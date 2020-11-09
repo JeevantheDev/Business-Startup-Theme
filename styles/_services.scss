@@ -1,0 +1,51 @@
+@import "./mixin";
+
+.services {
+    background-color: $special-color;
+
+    .custom {
+        @include fontColorChange($special-color)
+    }
+
+}
+
+.all-services {
+    display: flex;
+    height: auto;
+    margin: 2rem 0;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+
+    .service {
+        display: flex;
+        width: 15vw;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-color: $secondary-color;
+        @include fontColorChange($secondary-color);
+        box-shadow: 0 5px $primary-color;
+
+        i {
+            color: $primary-color;
+            margin-bottom: 1rem;
+        }
+
+        .description {
+            text-align: center;
+            font-size: 0.85rem;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .all-services {
+        flex-direction: column;
+
+        .service {
+            width: 50vw;
+            margin-bottom: 1.5rem;
+        }
+    }
+}
